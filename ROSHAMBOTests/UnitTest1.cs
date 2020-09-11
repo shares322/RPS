@@ -8,6 +8,7 @@ namespace ROSHAMBOTests
     {
         public string rock { get; private set; }
         public string paper { get; private set; }
+        public string scissors { get; private set; }
         public string isTrue { get; private set; }
 
         [Fact]
@@ -22,6 +23,23 @@ namespace ROSHAMBOTests
 
             //Act
             string result = rpsclass.PaperWins(rockInput, paperInput);
+
+            //Assert
+            Assert.Equal(expectedResult, result);
+        }
+
+        [Fact]
+        public void ScissorsBeatPaper()
+        {
+            //Arrange
+            string scissorsInput = scissors;
+            string paperInput = paper;
+            string expectedResult = isTrue;
+
+            RPSClass rpsclass = new RPSClass();
+
+            //Act
+            string result = rpsclass.ScissorsWin(scissorsInput, paperInput);
 
             //Assert
             Assert.Equal(expectedResult, result);
