@@ -15,5 +15,10 @@ namespace ROSHAMBO
         {
             return scissorsInput;
         }
+
+        public string RockWins(string scissorsInput, string rockInput)
+        {
+            return rockInput;
+        }
     }
 }
