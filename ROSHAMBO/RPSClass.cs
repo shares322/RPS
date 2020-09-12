@@ -25,5 +25,10 @@ namespace ROSHAMBO
         {
             return "You tied! Try again.";
         }
+
+        public string ScissorsTies(string scissorsInput1, string scissorsInput)
+        {
+            return "You tied! Try again.";
+        }
     }
 }

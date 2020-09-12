@@ -76,5 +76,21 @@ namespace ROSHAMBOTests
             //Assert
             Assert.Equal(expectedResult, result);
         }
+        [Fact]
+        public void ScissorsAndScissorsTies()
+        {
+            //Arrange
+            string scissorsInput = scissors;
+            string scissorsInput1 = scissors;
+            string expectedResult = isTrue;
+
+            RPSClass rpsclass = new RPSClass();
+
+            //Act
+            string result = rpsclass.ScissorsTies(scissorsInput1, scissorsInput);
+
+            //Assert
+            Assert.Equal(expectedResult, result);
+        }
     }
 }
