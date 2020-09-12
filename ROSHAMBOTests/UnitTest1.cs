@@ -60,5 +60,21 @@ namespace ROSHAMBOTests
             //Assert
             Assert.Equal(expectedResult, result);
         }
+        [Fact]
+        public void RockAndRockTies()
+        {
+            //Arrange
+            string rockInput = rock;
+            string rockInput1 = rock;
+            string expectedResult = isTrue;
+
+            RPSClass rpsclass = new RPSClass();
+
+            //Act
+            string result = rpsclass.RockTies(rockInput1, rockInput);
+
+            //Assert
+            Assert.Equal(expectedResult, result);
+        }
     }
 }

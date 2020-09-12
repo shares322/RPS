@@ -20,5 +20,10 @@ namespace ROSHAMBO
         {
             return rockInput;
         }
+
+        public string RockTies(string rockInput1, string rockInput)
+        {
+            return "You tied! Try again.";
+        }
     }
 }
