@@ -61,36 +61,38 @@ namespace ROSHAMBOTests
             Assert.Equal(expectedResult, result);
         }
         [Fact]
-        public void RockAndRockTies()
+        public void RockTiesRock()
         {
             //Arrange
-            string rockInput = rock;
-            string rockInput1 = rock;
-            string expectedResult = isTrue;
+            string userInput = rock;
+            string userInput1 = rock;
+            string expectedResult = "You tied! Try again.";
 
             RPSClass rpsclass = new RPSClass();
 
             //Act
-            string result = rpsclass.RockTies(rockInput1, rockInput);
+            string result = rpsclass.Ties(userInput, userInput1);
 
             //Assert
             Assert.Equal(expectedResult, result);
+        
         }
         [Fact]
-        public void ScissorsAndScissorsTies()
+        public void ScissorsTiesScissors()
         {
             //Arrange
-            string scissorsInput = scissors;
-            string scissorsInput1 = scissors;
-            string expectedResult = isTrue;
+            string userInput = scissors;
+            string userInput1 = scissors;
+            string expectedResult = "You tied! Try again.";
 
             RPSClass rpsclass = new RPSClass();
 
             //Act
-            string result = rpsclass.ScissorsTies(scissorsInput1, scissorsInput);
+            string result = rpsclass.Ties(userInput, userInput1);
 
             //Assert
             Assert.Equal(expectedResult, result);
+
         }
     }
 }

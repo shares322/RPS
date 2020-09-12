@@ -21,12 +21,7 @@ namespace ROSHAMBO
             return rockInput;
         }
 
-        public string RockTies(string rockInput1, string rockInput)
-        {
-            return "You tied! Try again.";
-        }
-
-        public string ScissorsTies(string scissorsInput1, string scissorsInput)
+        public string Ties(string userInput1, string userInput)
         {
             return "You tied! Try again.";
         }
