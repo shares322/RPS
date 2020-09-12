@@ -29,19 +29,21 @@ namespace ROSHAMBO
         public string EnterOnlyString(string userInput, string userInput1)
         {
           
-            if ((userInput == "1") || (userInput == "2") || (userInput == "3"));
+            if ((userInput == "1") || (userInput == "2") || (userInput == "3"))
+                return "You have to enter either rock, paper or scissors";
+
             if (string.IsNullOrWhiteSpace(userInput1))
             {
                 throw new ArgumentException($"'{nameof(userInput1)}' cannot be null or whitespace", nameof(userInput1));
             }
-            else if(string.IsNullOrWhiteSpace(userInput1))
+            else if (string.IsNullOrWhiteSpace(userInput1))
             {
                 throw new ArgumentException($"'{nameof(userInput1)}' cannot be null or whitespace", nameof(userInput1));
             }
             else
             {
-                return "You have to enter either rock, paper or scissors";
-            }          
+                return "Please try again";
+            }
         }
     }
 }
