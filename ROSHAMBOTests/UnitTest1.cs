@@ -116,12 +116,13 @@ namespace ROSHAMBOTests
         {
             //Arrange
             string userInput = "1";
+            string userInput1 = scissors;
             string expectedResult = "You have to enter either rock, paper or scissors";
 
             RPSClass rpsclass = new RPSClass();
 
             //Act
-            string result = rpsclass.EnterOnlyString(userInput);
+            string result = rpsclass.EnterOnlyString(userInput, userInput1);
 
             //Assert
             Assert.Equal(expectedResult, result);

@@ -7,7 +7,7 @@ namespace ROSHAMBO
 {
     public class RPSClass
     {
-        public string PaperWins(string rockInput, string paperInput)
+        public string PaperWins(string userInput, string paperInput)
         {
             return paperInput;
         }
@@ -26,13 +26,19 @@ namespace ROSHAMBO
             return "You tied! Try again.";
         }
 
-        public string EnterOnlyString(string userInput)
+        public string EnterOnlyString(string userInput, string userInput1)
         {
-            if (userInput is null)
-            {
-                throw new ArgumentNullException(nameof(userInput));
-            }
+          
             if ((userInput == "1") || (userInput == "2") || (userInput == "3"));
+            if (string.IsNullOrWhiteSpace(userInput1))
+            {
+                throw new ArgumentException($"'{nameof(userInput1)}' cannot be null or whitespace", nameof(userInput1));
+            }
+            else if(string.IsNullOrWhiteSpace(userInput1))
+            {
+                throw new ArgumentException($"'{nameof(userInput1)}' cannot be null or whitespace", nameof(userInput1));
+            }
+            else
             {
                 return "You have to enter either rock, paper or scissors";
             }          
