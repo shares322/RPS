@@ -1,6 +1,7 @@
 using System;
 using Xunit;
 using ROSHAMBO;
+using System.Collections.Generic;
 
 namespace ROSHAMBOTests
 {
@@ -109,7 +110,21 @@ namespace ROSHAMBOTests
 
             //Assert
             Assert.Equal(expectedResult, result);
+        }
+        [Fact]
+        public void UserShouldOnlyEnterString()
+        {
+            //Arrange
+            string userInput = "1";
+            string expectedResult = "You have to enter either rock, paper or scissors";
 
+            RPSClass rpsclass = new RPSClass();
+
+            //Act
+            string result = rpsclass.EnterOnlyString(userInput);
+
+            //Assert
+            Assert.Equal(expectedResult, result);
         }
     }
 }

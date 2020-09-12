@@ -25,5 +25,17 @@ namespace ROSHAMBO
         {
             return "You tied! Try again.";
         }
+
+        public string EnterOnlyString(string userInput)
+        {
+            if (userInput is null)
+            {
+                throw new ArgumentNullException(nameof(userInput));
+            }
+            if ((userInput == "1") || (userInput == "2") || (userInput == "3"));
+            {
+                return "You have to enter either rock, paper or scissors";
+            }          
+        }
     }
 }
