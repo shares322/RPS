@@ -94,5 +94,22 @@ namespace ROSHAMBOTests
             Assert.Equal(expectedResult, result);
 
         }
+        [Fact]
+        public void PaperTiesPaper()
+        {
+            //Arrange
+            string userInput = paper;
+            string userInput1 = paper;
+            string expectedResult = "You tied! Try again.";
+
+            RPSClass rpsclass = new RPSClass();
+
+            //Act
+            string result = rpsclass.Ties(userInput, userInput1);
+
+            //Assert
+            Assert.Equal(expectedResult, result);
+
+        }
     }
 }
